@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['rwz']
   s.email       = ['rwz@duckroll.ru']
-  s.homepage    = ''
+  s.homepage    = 'http://github.com/rwz/uniquify-uuid'
   s.summary     = %q{Generate a unique UUID token with Active Record.}
-  s.description = %q{The same as Ryan Bates uniquify gem, but uses UUID to generate tokens.}
+  s.description = %q{The same as Ryan Bates uniquify gem, but uses UUID as default to generate tokens.}
 
   s.rubyforge_project = "uniquify-uuid"
 
