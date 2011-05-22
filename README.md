@@ -5,36 +5,32 @@ This gem helps to generate unique tokens for ActiveRecord models. It uses UUID a
 ## Install
 
 Add gem to your Gemfile:
-```
-gem 'uniquify-uuid'
-```
+
+    gem 'uniquify-uuid'
+
 then bo bundle:
-```
-$ bundle install
-```
+
+    $ bundle install
 
 ## Usage
 
 Let’s say you have a Project model with a 'token' string column that you want to be a unique identifier. Just add this to your model.
-```ruby
-class Project < ActiveRecord::Base
-  uniquify :token
-end
-```
+
+    class Project < ActiveRecord::Base
+      uniquify :token
+    end
 
 This will generate a random and unique UUID string before each project is created.
 
 You can specify multiple columns like this.
-```ruby
-uniquify :token, :salt
-```
+
+    uniquify :token, :salt
 
 You can also pass a block to generate your own random token.
-```ruby
-uniquify :token do
-  rand(99999)
-end
-```
+
+    uniquify :token do
+      rand(99999)
+    end
 
 If the generated value already exists, the block will be run again until the value is unique.
 
