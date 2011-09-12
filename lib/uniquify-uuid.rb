@@ -6,7 +6,7 @@ module Uniquify
   module InstanceMethods
     def ensure_unique(name)
       begin
-        self[name] = yield
+        self[name] = yield(self)
       end while self.class.exists?(name => self[name])
     end
   end
