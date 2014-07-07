@@ -6,18 +6,16 @@ Gem::Specification.new do |s|
   s.name        = 'uniquify-uuid'
   s.version     = Uniquify::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ['rwz']
-  s.email       = ['rwz@duckroll.ru']
+  s.authors     = ['Pavel Pravosud']
+  s.email       = ['pavel@pravosud.com']
   s.homepage    = 'http://github.com/rwz/uniquify-uuid'
-  s.summary     = %q{Generate a unique UUID token with Active Record.}
-  s.description = %q{The same as Ryan Bates uniquify gem, but uses UUID as default to generate tokens.}
-
-  s.rubyforge_project = "uniquify-uuid"
+  s.license     = 'MIT'
+  s.summary     = 'Generate a unique UUID token with Active Record'
+  s.description = 'The same as Ryan Bates uniquify gem, but uses UUID as default to generate tokens'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = %w(lib)
-  
-  s.add_dependency 'simple_uuid', '0.1.2'
+  s.require_path  = 'lib'
+
+  s.add_dependency 'simple_uuid', '~> 0.4.0'
 end
